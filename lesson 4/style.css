@@ -1,0 +1,48 @@
+form {
+    width: 300px;
+    font-size: 18px;
+}
+fieldset {
+    width: 100%;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+input, textarea {
+    display: block;
+    background-color: #202020;
+    border: 1px solid red;
+    margin-bottom: 10px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 1px;
+    font-size: 18px;
+}
+body{
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.label {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+textarea {
+    resize: vertical;    
+    max-height: 150px;
+    height: 30px;
+    width: 228px;
+}
+button{
+    background-color: red;
+    color: #000000;
+    font-weight: 700;
+    padding: 7px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}  
