@@ -115,11 +115,11 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .decor-1::before {
     top: 120px;
-    left: -350px;
+    left: -150px;
 }
 .decor-2::before {
     bottom: 120px;
-    right: -350px;
+    right: -150px;
 }
 .gym {
     width: 100%;
@@ -211,3 +211,4 @@ h1,h2,h3,h4,h5,h6,p{
     letter-spacing: 0.04em;
     color: #858e8a;
 }
+
