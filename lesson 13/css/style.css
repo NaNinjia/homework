@@ -35,8 +35,13 @@ body {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	grid-column: 3 / 10 span;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .main .container {
+	max-width: 1000px;
+	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
