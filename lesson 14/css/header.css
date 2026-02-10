@@ -1,0 +1,32 @@
+.header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d3cbd9;
+}
+.header__phone {
+    text-align: right;
+}
+.header__link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #2c332f;
+    -webkit-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+.header__first-visit {
+    margin-bottom: 8px;
+}
+.header__link:hover {
+    color: #3596ED;
+}

@@ -1,0 +1,133 @@
+.article{
+    margin-bottom: 120px;
+    padding-top: 80px;
+}
+.discovery__text, .lessons__text, .review__text{
+    margin-bottom: 20px;
+}
+.lessons__item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.lessons__item::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3596ED;
+    position: absolute;
+    left: -16px;
+}
+.mb {
+    margin-bottom: 80px;
+}
+.discovery__decor-wrap {
+    position: relative;
+}
+.review__decor-wrap {
+    position: relative;
+}
+.discovery__decor-wrap::before {
+    top: 120px;
+    left: 0px;
+}
+
+.review__decor-wrap::before {
+    bottom: 120px;
+    right: 0px;
+}
+
+.title-midium {
+    font-size: 36px;
+}
+.obresish {
+    max-width: 744px;
+    margin-bottom: 40px;
+}
+.lessons__item {
+    margin-bottom: 12px;
+}
+.lessons__list {
+    margin-top: 0;
+    padding-left: 17px;
+    list-style: none;
+}
+.mb {
+    margin-bottom: 40px;
+}
+.review__btn-play {
+    background-color: #3596ED;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    cursor: pointer;
+    -webkit-transition: opacity 0.2s, background-color 0.2s;
+    -o-transition: opacity 0.2s, background-color 0.2s;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+.review__btn-play:hover {
+    background-color: #4d9bdf;
+}
+
+.review__btn-play:not(:disabled):active {
+    background-color: #2b7dc5;
+}
+
+
+
+@media (width<=768px) {
+    .lessons__item::before{
+        display: none
+    }
+    .mb {
+        margin-bottom: 60px;
+    }
+    .title-midium {
+        font-size: 32px;
+    }
+}
+@media (width<=576px) {
+    .article {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    .mb {
+        margin-bottom: 40px;
+    }
+    .title-large {
+        font-size: 32px;
+    }
+    .title-midium {
+        font-size: 28px;
+    }
+    .review__btn-play {
+        width: 50px;
+        height: 50px;
+    }
+    .review__btn-img {
+        width: 20px;
+    }
+}
