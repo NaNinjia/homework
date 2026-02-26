@@ -1,7 +1,13 @@
+svg {
+  fill: none;
+}
+
 .page {
   font-family: var(--font-family);
   font-weight: 400;
   color: var(--main-color);
+  scroll-behavior: smooth;
+  scroll-padding: 98px;
 }
 
 .page__body {
@@ -19,8 +25,34 @@
   margin-inline: auto;
 }
 
+img {
+  object-fit: cover;
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 1px solid var(--accent-color);
   outline-offset: 2px;
+}
+
+.text-regular, .text-light {
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--main-color)
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.title-md {
+  font-weight: 600;
+  /* min-weight 375px, max-weight 992px*/
+  font-size: clamp(32px, 0.8rem + 5.12vw, 60px);
+  text-transform: uppercase;
+  color: var(--main-color);
 }
