@@ -49,10 +49,38 @@ button:focus-visible {
   font-weight: 400;
 }
 
-.title-md {
+.title-md, .title-sm {
   font-weight: 600;
-  /* min-weight 375px, max-weight 992px*/
-  font-size: clamp(32px, 0.8rem + 5.12vw, 60px);
   text-transform: uppercase;
   color: var(--main-color);
+}
+
+.title-md {
+  /* min-weight 375px, max-weight 992px*/
+  font-size: clamp(32px, 0.8rem + 5.12vw, 60px);
+}
+
+.title-sm {
+  /* min-weight 375px, max-weight 768px*/
+  font-size: clamp(24px, 1.023rem + 2.04vw, 32px); 
+}
+
+@media (width > 576px) {
+  .section {
+    padding-bottom: 140px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (width <= 576px) {
+  .section {
+    padding-bottom: 80px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
 }
