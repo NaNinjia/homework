@@ -71,7 +71,7 @@
 
 .characteristics__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, min-max(345px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
     gap: 40px 20px;
 }
 
@@ -82,15 +82,7 @@
 
 @media (width > 576px) {
     .characteristics__card-icon {
-        width: 56px;
-        height: 56px;
-    }
-}
-
-@media (width > 576px) {
-    .characteristics__card-icon {
         width: 48px;
-        height: 49px;
     }
 }
 
