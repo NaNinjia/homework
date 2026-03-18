@@ -125,7 +125,7 @@
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    background: url(/icons/arrow.svg);
+    background: url(../../icons/arrow.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -201,7 +201,7 @@
     background-size: contain;
     width: 24px;
     height: 24px;
-    background: url(/img/search.svg) center no-repeat;
+    background: url(../../img/search.svg) center no-repeat;
 }
 
 .header__actions {
