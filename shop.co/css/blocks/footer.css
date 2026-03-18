@@ -1,0 +1,218 @@
+.footer {
+    background-color: var(--bg-color-secondary);
+}
+
+.footer__container {
+    transform: translateY(-90px);
+}
+
+.footer__news {
+    background-color: var(--bg-color-revers);
+    border-radius: 20px;
+    padding: 36px 64px;
+    margin-bottom: 50px;
+}
+
+@media (width > 768px) {
+    .footer__news {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+}
+
+.footer__news-title {
+    color: var(--main-color-revers);
+    max-width: 689px;
+}
+
+@media (width <= 768px) {
+    .footer__news-title {
+        margin-bottom: 32px;
+    }
+}
+
+@media (width <= 768px) {
+    .footer__news-form {
+        width: 100%;
+    }
+}
+
+.footer__news-form--input {
+    border-radius: 62px;
+    padding: 12px 12px 12px 50px;
+    margin-bottom: 14px;
+    width: 100%;
+    border: none;
+    transition: box-shadow var(--tran-time);
+    cursor: pointer;
+}
+
+@media (any-hover: hover) {
+    .footer__news-form--input:hover {
+        box-shadow: 0 4px 12px #ffffffe6;
+    }
+}
+
+.footer__news-form--input:focus {
+    box-shadow: 0 8px 24px #ffffff66, 0 2px 4px #ffffff1a;
+    outline: none;
+}
+
+.footer__news-form--label {
+    position: relative;
+}
+
+.footer__news-form--label::before {
+    content: "";
+    position: absolute;
+    top: -1.5px;
+    left: 17px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(/icons/messag.svg);
+}
+
+.footer__news-form--button {
+    background-color: var(--bg-color);
+    border-radius: 62px;
+    padding: 12px 16px;
+    width: 100%;
+    border: 2px solid var(--bg-color-revers);
+    cursor: pointer;
+    transition: all var(--tran-time-medium) ease;
+    box-shadow: 0 0 0 0 #ffffff80;
+}
+
+@media (any-hover: hover) {
+    .footer__news-form--button:hover {
+        background-color: var(--bg-color-revers);
+        color: var(--main-color-revers);
+        border-color: var(--main-color-revers);
+        box-shadow: 0 0 20px #ffffffcc;
+        transform: translateY(-3px);
+    }
+}
+
+.footer__news-form--button:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 30px var(--bg-color);
+}
+
+.footer__info-blocks {
+    
+    padding-bottom: 50px;
+    border-bottom: 1px solid #0000001a ;
+    margin-bottom: 25px;
+}
+
+@media (width > 992px) {
+    .footer__info-blocks {
+        display: flex;
+        align-items: stretch;
+        gap: 118px;
+    }
+}
+
+.footer__info-block {
+    max-width: 248px;
+}
+
+@media (width <= 992px) {
+    .footer__info-block {
+        max-width: 348px;
+        margin-bottom: 24px;
+    }
+}
+
+.footer__logo {
+    margin-bottom: 25px;
+}
+
+@media (width <= 992px) {
+    .footer__logo {
+        margin-bottom: 14px;
+    }
+}
+
+.footer__info-text {
+    margin-bottom: 35px;
+    color: var(--main-color-glow);
+}
+
+.footer__info-sources {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer__info-sources--link {
+    transition: transform var(--tran-time);
+}
+
+@media (any-hover: hover) {
+    .footer__info-sources--link:hover {
+        transform: scale(1.2);
+    }
+}
+
+.footer__nav-group {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer__nav-section {
+    min-width: 159px;
+}
+
+@media (width <= 726px) {
+    .footer__nav-section {
+        margin-bottom: 24px;
+    }
+}
+
+.footer__nav-section--title {
+    margin-bottom: 26px;
+}
+
+.footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    
+}
+
+.footer__nav-link {
+    color: var(--main-color-glow);
+}
+
+@media (any-hover: hover) {
+    .footer__nav-link:hover {
+        color: var(--main-color);
+    }
+}
+
+.footer__rights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (width <= 668px) {
+    .footer__rights {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.footer__rights-text {
+    color: var(--main-color-glow);
+    margin-bottom: 16px;
+}

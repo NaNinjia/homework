@@ -1,0 +1,51 @@
+.registration {
+    background-color: var(--bg-color-revers);
+    color: var(--main-color-revers);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 38px;
+}
+
+.registration__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--main-color-revers);
+}
+
+.registration__link {
+    color: var(--main-color-revers);
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+.registration__button {
+    position: absolute;   
+    right: 160px;  
+    background: none;  
+    border: none;      
+    padding: 5px;     
+    cursor: pointer;   
+    color: var(--main-color-revers);
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+}
+.registration__button-cross:hover {
+    stroke: var(--main-color-revers);
+}
+
+@media (width <= 992px) {
+    .registration__text {
+        display: none;
+    }
+    .registration__button {
+        right: 16px;
+    }
+    .registration__link {
+        font-size: 12px;
+    }
+}

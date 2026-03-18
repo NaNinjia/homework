@@ -1,0 +1,25 @@
+:root {
+    /* font-family */
+    --font-family: "Satoshi", sans-serif;
+    /* colors */
+    --main-color: #000;
+    --main-color-revers: #fff;
+    --main-color-glow: #999;
+    --main-color-sale: #f33;
+    --bg-color: #fff;
+    --bg-color-revers: #000;
+    --bg-color-secondary: #F0F0F0;
+    --bg-color-sale: #ff33331a;
+    --border-color-glow: #0000001a;
+    /* layer */
+    --layer-negative: -1;
+    --layer-0: 0;
+    --layer-1: 1;
+    --layer-2: 2;
+    --layer-3: 3;
+    /* transition-time */
+    --tran-time-short: 0.1s;
+    --tran-time: 0.2s;
+    --tran-time-medium: 0.4s;
+    --tran-time-long: 0.5s;
+}

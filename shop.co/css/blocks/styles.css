@@ -1,0 +1,139 @@
+.stiles {
+    margin-bottom: 80px;
+}
+
+@media (width <= 768px) {
+    .stiles {
+    margin-bottom: 50px;
+}
+}
+
+.stiles__container {
+    background-color: var(--bg-color-secondary);
+    border-radius: 40px;
+    padding-block: 70px;
+}
+
+
+.stiles__title {
+    margin-bottom: 64px;
+    text-align: center;
+    
+}
+
+.stiles__grid-title {
+    padding: 25px 36px;
+    z-index: var(--layer-1);
+    transition: all var(--tran-time-medium) ease;
+    position: relative;
+}
+
+.stiles__grid {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+	gap: 20px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, auto); 
+}
+
+.stiles__grid-link {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    min-height: 289px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--tran-time-medium) cubic-bezier(0.2, 0, 0, 1);
+}
+
+.stiles__grid-link:active {
+    outline: none;
+}
+
+
+@media (any-hover: hover) {
+    .stiles__grid-link:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 25px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .stiles__grid-link:hover::before {
+        background: #00000080;
+    }
+
+    .stiles__grid-link:hover .stiles__grid-title {
+        transform: scale(1.05);
+        letter-spacing: 2px;
+        text-shadow: 0 0 15px #ffffffb3;
+    }
+}
+
+.stiles__grid-link:nth-child(1) {
+    grid-column: span 4;  
+}
+
+
+.stiles__grid-link:nth-child(2) {
+    grid-column: span 6;  
+}
+
+
+.stiles__grid-link:nth-child(3) {
+    grid-column: span 6;
+}
+
+
+.stiles__grid-link:nth-child(4) {
+    grid-column: span 4;
+}
+
+.stiles__grid-link--free {
+    background-image: url(../../img/stiles/stiles-free.png);
+}
+.stiles__grid-link--formal {
+    background-image: url(../../img/stiles/stiles-formal.png);
+}
+.stiles__grid-link--evening {
+    background-image: url(../../img/stiles/stiles-evening.png);
+}
+.stiles__grid-link--sport {
+    background-image: url(../../img/stiles/stiles-sport.png);
+}
+
+@media (width <= 768px) {
+    .stiles__grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .stiles__grid-link:nth-child(1),
+    .stiles__grid-link:nth-child(2),
+    .stiles__grid-link:nth-child(3),
+    .stiles__grid-link:nth-child(4) {
+        grid-column: span 1; 
+    }
+    
+    .stiles__grid-link {
+        min-height: 190px;
+    }
+
+    .stiles__grid-link::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px);
+        z-index: var(--layer-0);
+    }
+}

@@ -1,0 +1,11 @@
+.leaders {
+    margin-top: 64px;
+    padding-bottom: 80px;
+}
+
+@media (width < 768px) {
+    .leaders {
+        margin-top: 42px;
+        padding-bottom: 0;
+    }
+}
