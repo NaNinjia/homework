@@ -9,7 +9,6 @@
         href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <script src="./js/index.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
     <title>SHOP</title>
 </head>
 <body class="page__body">
@@ -37,11 +36,18 @@
                         <li class="header__list-item">
                             <div class="header__details">
                                 <div class="header__select-wrapper">
-                                    <select class="header__details-wrapper text">
-                                        <option class="header__details-item" value="shop">Магазин</option>
-                                        <option class="header__details-item" value="contacts">Телефон</option>
-                                        <option class="header__details-item" value="address">Адрес</option>
-                                    </select>
+                                    <div class="header__custom-select">
+                                        <div class="header__select-trigger text">
+                                            Магазин
+                                            <svg class="header__select-arrow" width="20px" height="20px">
+                                                <use href="./icons/sprite-icons.svg#arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="header__select-dropdown">
+                                            <div class="header__select-option" data-value="contacts">Телефон</div>
+                                            <div class="header__select-option" data-value="address">Адрес</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -59,7 +65,7 @@
                             <use href="./icons/sprite-icons.svg#search"></use>
                         </svg>
                     </button>
-                    <a href="#" title="корзина" class="header__actions-button">
+                    <a href="#" title="корзина" class="header__actions-button--cart">
                         <svg width="24px" height="24px">
                             <use class="header__action" href="./icons/sprite-icons.svg#cart"></use>
                         </svg>
@@ -449,112 +455,204 @@
         </div>
     </section>
     <section class="comment">
-        <div class="comment__container container ">
+    <div class="comment__container container">
+        <div class="comment__header">
             <h2 class="comment__title title-med">ЧТО О НАС ГОВОРЯТ</h2>
             <div class="comment__buttons">
-                <button class="comment__button button-previewer">
-                    <svg width="24" height="24">
-                        <use class="comment__button-icon" href="./icons/sprite-icons.svg#left-arrow"></use>
-                    </svg>
-                </button>
-                <button class="comment__button button-previewer">
-                    <svg width="24" height="24">
-                        <use class="comment__button-icon" href="./icons/sprite-icons.svg#right-arrow"></use>
-                    </svg>
-                </button>
+            <button class="comment__button button-previewer" id="commentPrevBtn">
+                <svg width="24" height="24">
+                    <use class="comment__button-icon" href="./icons/sprite-icons.svg#left-arrow"></use>
+                </svg>
+            </button>
+            <button class="comment__button button-previewer" id="commentNextBtn">
+                <svg width="24" height="24">
+                    <use class="comment__button-icon" href="./icons/sprite-icons.svg#right-arrow"></use>
+                </svg>
+            </button>
             </div>
-            <div class="comment__slider-wrapper ">
-                <div class="swiper comment__slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="comment__blocks">
-                                <div class="comment__block-inner">
-                                    <div class="comment__estimation">
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="comment__user">
-                                        <h4 class="comment__user-name title-name-user">Виталий У.</h4>
-                                        <svg width="24" height="24">
-                                            <use href="./icons/sprite-icons.svg#check"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="comment__text-comment text-s">«Я в восторге от качества и стиля одежды, которую получил от Shop.co. От повседневных вещей до элегантных платьев — каждая покупка превзошла мои ожидания.»</p>
-                                </div>
-                                <div class="comment__block-inner dis-3-card">
-                                    <div class="comment__estimation">
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="comment__user">
-                                        <h4 class="comment__user-name title-name-user">Даниил В.</h4>
-                                        <svg width="24" height="24">
-                                            <use href="./icons/sprite-icons.svg#check"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="comment__text-comment text-s">«Раньше было трудно найти одежду под мой стиль, пока я не открыл Shop.co. Их ассортимент впечатляет и подходит для разных вкусов и случаев.»</p>
-                                </div>
-                                <div class="comment__block-inner dis-2-card">
-                                    <div class="comment__estimation">
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                        <svg width="18" height="17">
-                                            <use href="./icons/sprite-icons.svg#star"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="comment__user">
-                                        <h4 class="comment__user-name title-name-user">Альберт Б.</h4>
-                                        <svg width="24" height="24">
-                                            <use href="./icons/sprite-icons.svg#check"></use>
-                                        </svg>
-                                    </div>
-                                    <p class="comment__text-comment text-s">«Я всегда ищу уникальные модные вещи и был рад открыть для себя Shop.co. Их выбор одежды очень разнообразен и полностью соответствует последним модным трендам.»</p>
-                                </div>
+        </div>
+        
+        <div class="comment__slider-wrapper">
+            <div class="comment__slider">
+                <div class="comment__track" id="commentTrack">
+                    <!-- Слайд 1 -->
+                    <div class="comment__slide">
+                        <div class="comment__block-inner">
+                            <div class="comment__estimation">
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
                             </div>
+                            <div class="comment__user">
+                                <h4 class="comment__user-name title-name-user">Виталий У.</h4>
+                                <svg width="24" height="24">
+                                    <use href="./icons/sprite-icons.svg#check"></use>
+                                </svg>
+                            </div>
+                            <p class="comment__text-comment text-s">«Я в восторге от качества и стиля одежды, которую получил от Shop.co. От повседневных вещей до элегантных платьев — каждая покупка превзошла мои ожидания.»</p>
+                        </div>
+                    </div>
+                    
+                    <div class="comment__slide">
+                        <div class="comment__block-inner">
+                            <div class="comment__estimation">
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div class="comment__user">
+                                <h4 class="comment__user-name title-name-user">Даниил В.</h4>
+                                <svg width="24" height="24">
+                                    <use href="./icons/sprite-icons.svg#check"></use>
+                                </svg>
+                            </div>
+                            <p class="comment__text-comment text-s">«Раньше было трудно найти одежду под мой стиль, пока я не открыл Shop.co. Их ассортимент впечатляет и подходит для разных вкусов и случаев.»</p>
+                        </div>
+                    </div>
+                    
+                    <div class="comment__slide">
+                        <div class="comment__block-inner">
+                            <div class="comment__estimation">
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div class="comment__user">
+                                <h4 class="comment__user-name title-name-user">Альберт Б.</h4>
+                                <svg width="24" height="24">
+                                    <use href="./icons/sprite-icons.svg#check"></use>
+                                </svg>
+                            </div>
+                            <p class="comment__text-comment text-s">«Я всегда ищу уникальные модные вещи и был рад открыть для себя Shop.co. Их выбор одежды очень разнообразен и полностью соответствует последним модным трендам.»</p>
+                        </div>
+                    </div>
+                    
+                    <div class="comment__slide">
+                        <div class="comment__block-inner">
+                            <div class="comment__estimation">
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div class="comment__user">
+                                <h4 class="comment__user-name title-name-user">Екатерина М.</h4>
+                                <svg width="24" height="24">
+                                    <use href="./icons/sprite-icons.svg#check"></use>
+                                </svg>
+                            </div>
+                            <p class="comment__text-comment text-s">«Отличный сервис и быстрая доставка! Купила платье на выпускной — все подруги были в восторге. Обязательно закажу ещё!»</p>
+                        </div>
+                    </div>
+                    
+                    <div class="comment__slide">
+                        <div class="comment__block-inner">
+                            <div class="comment__estimation">
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div class="comment__user">
+                                <h4 class="comment__user-name title-name-user">Артём К.</h4>
+                                <svg width="24" height="24">
+                                    <use href="./icons/sprite-icons.svg#check"></use>
+                                </svg>
+                            </div>
+                            <p class="comment__text-comment text-s">«Очень удобный сайт, приятные цены. Кроссовки носятся уже 3 месяца — как новые. Рекомендую!»</p>
+                        </div>
+                    </div>
+                    
+                    <div class="comment__slide">
+                        <div class="comment__block-inner">
+                            <div class="comment__estimation">
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                                <svg width="18" height="17">
+                                    <use href="./icons/sprite-icons.svg#star"></use>
+                                </svg>
+                            </div>
+                            <div class="comment__user">
+                                <h4 class="comment__user-name title-name-user">Ольга С.</h4>
+                                <svg width="24" height="24">
+                                    <use href="./icons/sprite-icons.svg#check"></use>
+                                </svg>
+                            </div>
+                            <p class="comment__text-comment text-s">«Отличное качество материалов! Заказала худи — очень мягкое и тёплое. Доставка на следующий день, спасибо!»</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- тут должны быть доп. слайды -->
-                 
             </div>
         </div>
+    </div>
     </section>
     <footer class="footer">
         <div class="footer__container container">
@@ -562,7 +660,6 @@
                 <h2 class="footer__news-title title-footer-news">БУДЬТЕ В КУРСЕ ВСЕХ ПОСЛЕДНИХ НОВОСТЕЙ</h2>
                 <form class="footer__news-form">
                     <label class="footer__news-form--label" for="#">
-                        <!-- картинка сообщения -->
                         <input class="footer__news-form--input" placeholder="Ваша почта" type="text">
                     </label>
                     <button class="footer__news-form--button">Подписаться на рассылку</button>
@@ -661,6 +758,111 @@
             </div>
         </div>
     </footer>
+    <!-- окно регистрации -->
+    <div class="modal" id="registerModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+        <button class="modal__close" id="closeModalBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        
+        <div class="modal__content">
+            <h3 class="modal__title">Регистрация</h3>
+            <p class="modal__subtitle">Создайте аккаунт, чтобы продолжить</p>
+            
+            <form id="registerForm" class="modal__form">
+                <div class="modal__input-group">
+                    <label for="userName" class="modal__label">Имя</label>
+                    <input type="text" id="userName" class="modal__input" placeholder="Введите ваше имя" required>
+                </div>
+                
+                <div class="modal__input-group">
+                    <label for="userEmail" class="modal__label">Email</label>
+                    <input type="email" id="userEmail" class="modal__input" placeholder="example@mail.com" required>
+                </div>
+                
+                <div class="modal__input-group">
+                    <label for="userPassword" class="modal__label">Пароль</label>
+                    <div class="modal__password-wrapper">
+                        <input type="password" id="userPassword" class="modal__input" placeholder="Минимум 6 символов" required>
+                        <button type="button" class="modal__password-toggle" id="togglePassword">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="modal__input-group">
+                    <label class="modal__checkbox">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <span>Я согласен с <a href="#">условиями использования</a></span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="modal__submit">Зарегистрироваться</button>
+            </form>
+            
+            <div class="modal__footer">
+                <p>Уже есть аккаунт? <a href="#" id="showLoginBtn">Войти</a></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<!-- окно входа -->
+<div class="modal" id="loginModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+        <button class="modal__close" id="closeLoginModalBtn">
+            <svg width="24px" height="24px">
+                <use class="header__action" href="./icons/sprite-icons.svg#close"></use>
+            </svg>
+        </button>
+        
+        <div class="modal__content">
+            <h3 class="modal__title">Вход</h3>
+            <p class="modal__subtitle">Войдите в свой аккаунт</p>
+            
+            <form id="loginForm" class="modal__form">
+                <div class="modal__input-group">
+                    <label for="loginEmail" class="modal__label">Email</label>
+                    <input type="email" id="loginEmail" class="modal__input" placeholder="example@mail.com" required>
+                </div>
+                
+                <div class="modal__input-group">
+                    <label for="loginPassword" class="modal__label">Пароль</label>
+                    <input type="password" id="loginPassword" class="modal__input" placeholder="Введите пароль" required>
+                </div>
+                
+                <button type="submit" class="modal__submit">Войти</button>
+            </form>
+            
+            <div class="modal__footer">
+                <p>Нет аккаунта? <a href="#" id="showRegisterFromLoginBtn">Зарегистрироваться</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="emptyModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+        <button class="modal__close" id="closeEmptyModalBtn">
+            <svg width="24px" height="24px">
+                <use class="header__action" href="./icons/sprite-icons.svg#close"></use>
+            </svg>
+        </button>
+        
+        <div class="modal__content" id="emptyModalContent">
+            <h2>ПРОСТО ТЕКС ДЛЯ ПРОСТО КОРЗИНЫ</h2>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
 

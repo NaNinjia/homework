@@ -8,6 +8,10 @@
     height: 38px;
 }
 
+.registration.hidden {
+    display: none;
+}
+
 .registration__text {
     font-weight: 400;
     font-size: 14px;

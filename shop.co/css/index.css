@@ -12,3 +12,5 @@
 @import "./blocks/styles.css";
 @import "./blocks/sliders.css";
 @import "./blocks/footer.css";
+@import "./blocks/modal-window.css";
+@import "./blocks/modal-window-cart.css";
